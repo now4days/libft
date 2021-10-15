@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdark <mdark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/14 17:03:04 by mdark             #+#    #+#             */
-/*   Updated: 2021/10/14 20:12:36 by mdark            ###   ########.fr       */
+/*   Created: 2021/10/14 17:04:11 by mdark             #+#    #+#             */
+/*   Updated: 2021/10/14 20:12:33 by mdark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_isalpha(int ch)
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
+# include <unistd.h>
+typedef struct		s_list
 {
-	return ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'));
-}
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+int		ft_toupper(int ch);
+int		ft_isalpha(int ch);
+
+
+
+
+
+#endif 

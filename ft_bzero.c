@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdark <mdark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/14 17:03:04 by mdark             #+#    #+#             */
-/*   Updated: 2021/10/14 20:12:36 by mdark            ###   ########.fr       */
+/*   Created: 2021/10/14 21:57:54 by mdark             #+#    #+#             */
+/*   Updated: 2021/10/14 21:58:51 by mdark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalpha(int ch)
+void    ft_bzero(void *str, size_t n)
 {
-	return ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'));
+	unsigned char   *dest;
+
+	dest = (unsigned char*)str;
+	while (n > 0)
+	{
+		*dest = 0;
+		dest++;
+		n--;
+	}
 }
