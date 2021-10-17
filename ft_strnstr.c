@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdark <mdark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/14 21:57:54 by mdark             #+#    #+#             */
-/*   Updated: 2021/10/17 17:00:18 by mdark            ###   ########.fr       */
+/*   Created: 2021/10/17 16:14:45 by mdark             #+#    #+#             */
+/*   Updated: 2021/10/17 17:00:46 by mdark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 {
-	unsigned char	*dest;
+	size_t	i;
+	size_t	j;
+	char	*s1;
+	char	*s2;
 
-	dest = (unsigned char *)str;
-	while (n > 0)
+	s1 = (char *)str1;
+	s2 = (char *)str2;
+	i = 0;
+	if (ft_strlen(s2) == '\0')
+		return (s1);
+	while (i < len && s1[i])
 	{
-		*dest = 0;
-		dest++;
-		n--;
+		j = 0;
+		while (i + j < len && s1[i + j] == s2[j] && s2[j])
+			j++;
+		if (s2[j] == '\0')
+			return (s1 + i);
+		i++;
 	}
+	return (NULL);
 }

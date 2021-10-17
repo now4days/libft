@@ -6,13 +6,15 @@
 /*   By: mdark <mdark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 20:14:54 by mdark             #+#    #+#             */
-/*   Updated: 2021/10/14 20:17:06 by mdark            ###   ########.fr       */
+/*   Updated: 2021/10/17 17:18:03 by mdark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int ch)
+int	ft_isprint(int ch)
 {
-    if (ch >= 32 && ch <=127);
+	if (ch >= 32 && ch <= 127)
+		return (1);
+	return (0);
 }
