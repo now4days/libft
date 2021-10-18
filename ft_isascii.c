@@ -6,13 +6,13 @@
 /*   By: mdark <mdark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 20:07:40 by mdark             #+#    #+#             */
-/*   Updated: 2021/10/14 20:12:29 by mdark            ###   ########.fr       */
+/*   Updated: 2021/10/18 14:29:16 by mdark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int ch)
+int	ft_isascii(int ch)
 {
-    return (ch >= 0 && ch <= 127);
+	return (ch >= 0 && ch <= 127);
 }

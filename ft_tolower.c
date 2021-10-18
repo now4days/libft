@@ -6,13 +6,13 @@
 /*   By: mdark <mdark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 14:59:38 by mdark             #+#    #+#             */
-/*   Updated: 2021/10/17 15:00:06 by mdark            ###   ########.fr       */
+/*   Updated: 2021/10/18 16:58:55 by mdark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int ch)
+int	ft_tolower(int ch)
 {
 	if (ch >= 'A' && ch <= 'Z')
 		return (ch - 'A' + 'a');
