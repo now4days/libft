@@ -6,7 +6,7 @@
 #    By: mdark <mdark@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 12:23:45 by mdark             #+#    #+#              #
-#    Updated: 2021/10/22 17:15:51 by mdark            ###   ########.fr        #
+#    Updated: 2021/10/22 18:00:21 by mdark            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ bonus:		${OBJS} ${OBJSB}
 			ar rc ${NAME} ${OBJS} ${OBJSB}
 clean:
 	rm -f ${OBJS} ${BONUS_OBJS}
+	rm -f libft.so ./a.out
 
 fclean: clean
 		rm -f ${NAME}
