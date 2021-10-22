@@ -6,7 +6,7 @@
 /*   By: mdark <mdark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 17:01:00 by mdark             #+#    #+#             */
-/*   Updated: 2021/10/22 17:01:01 by mdark            ###   ########.fr       */
+/*   Updated: 2021/10/22 17:33:28 by mdark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1)
 		return (NULL);
-	while (*s1 && ft_strrchr(set, *s1))
+	while (*s1 && ft_strrchr((char *)set, *s1))
 		s1++;
 	len = ft_strlen(s1);
-	while (len && ft_strrchr(set, *(s1 + len)))
+	while (len && ft_strrchr((char *)set, *(s1 + len)))
 		len--;
 	return (ft_substr(s1, 0, len + 1));
 }
